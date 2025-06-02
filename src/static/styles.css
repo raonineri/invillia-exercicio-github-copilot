@@ -15,6 +15,11 @@ body {
   background-color: #f5f5f5;
 }
 
+body.dark-mode {
+  background-color: #181a20;
+  color: #e0e0e0;
+}
+
 header {
   text-align: center;
   padding: 20px 0;
@@ -26,6 +31,11 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+}
+
+body.dark-mode header {
+  background-color: #232946;
+  color: #fff;
 }
 
 main {
@@ -57,17 +67,28 @@ section h3 {
   color: #1a237e;
 }
 
-.activity-card {
+body.dark-mode section {
+  background-color: #232946;
+  color: #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+.activity-card .participants-list{
   margin-bottom: 15px;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  position: relative;
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
+}
+
+body.dark-mode .activity-card h4 {
+  color: #8fd6e1;
 }
 
 .activity-card p {
@@ -93,6 +114,13 @@ section h3 {
   font-size: 16px;
 }
 
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+  background: #181a20;
+  color: #e0e0e0;
+  border-color: #31344b;
+}
+
 button {
   background-color: #1a237e;
   color: white;
@@ -102,6 +130,16 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+body.dark-mode button {
+  background-color: #8fd6e1;
+  color: #232946;
+}
+
+body.dark-mode button:hover {
+  background-color: #b8e994;
+  color: #232946;
 }
 
 button:hover {
@@ -120,16 +158,34 @@ button:hover {
   border: 1px solid #a5d6a7;
 }
 
+body.dark-mode .success {
+  background-color: #1b5e20;
+  color: #b8e994;
+  border-color: #388e3c;
+}
+
 .error {
   background-color: #ffebee;
   color: #c62828;
   border: 1px solid #ef9a9a;
 }
 
+body.dark-mode .error {
+  background-color: #7b1fa2;
+  color: #fff;
+  border-color: #ba68c8;
+}
+
 .info {
   background-color: #d1ecf1;
   color: #0c5460;
   border: 1px solid #bee5eb;
+}
+
+body.dark-mode .info {
+  background-color: #232946;
+  color: #8fd6e1;
+  border-color: #31344b;
 }
 
 .hidden {
@@ -141,4 +197,8 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+body.dark-mode footer {
+  color: #888;
 }
